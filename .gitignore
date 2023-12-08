@@ -15,3 +15,15 @@
 /emacs.d/transient/
 /emacs.d/var/
 /oh-my-zsh/
+/emacs.d/.dap-breakpoints
+/emacs.d/.lsp-session-v1
+/emacs.d/.mc-lists.el
+/emacs.d/backup/
+/emacs.d/eglot-java-eclipse-jdt-cache/
+/emacs.d/eshell/
+/emacs.d/init.el~
+/emacs.d/org-roam.db
+/emacs.d/projectile.cache
+/emacs.d/projects
+/emacs.d/share/
+/emacs.d/tramp
