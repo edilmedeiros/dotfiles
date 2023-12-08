@@ -1,0 +1,13 @@
+#+TITLE: Emacs config file
+Partially inspired by https://github.com/deviwil/dotfiles/blol/master/Emacs.org
+
+* Personal information
+Set personal information.
+#+begin_src emacs-lisp
+(setq user-full-name "José Edil G. de Medeiros"
+      user-mail-address "jose.edil@gmail.com"
+      user-work-mail-address "j.edil@ene.unb.br"
+      calendar-latitude -15.77972
+      calendar-longitude -47.92972
+      calendar-location-name "Brasília, Brasil")
+#+end_src
