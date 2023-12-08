@@ -1,2 +1,0 @@
-;;; Generated package description from obsidian.el  -*- no-byte-compile: t -*-
-(define-package "obsidian" "20221115.1143" "Obsidian Notes interface" '((emacs "27.2") (s "1.12.0") (dash "2.13") (markdown-mode "2.5") (elgrep "1.0.0") (yaml "0.5.1")) :commit "95bf7624e26adb29925e4609dd0aeacdb29c5bc5" :authors '(("Mykhaylo Bilyanskyy")) :maintainer '("Mykhaylo Bilyanskyy") :keywords '("obsidian" "pkm" "convenience") :url "https://github.com./licht1stein/obsidian.el")

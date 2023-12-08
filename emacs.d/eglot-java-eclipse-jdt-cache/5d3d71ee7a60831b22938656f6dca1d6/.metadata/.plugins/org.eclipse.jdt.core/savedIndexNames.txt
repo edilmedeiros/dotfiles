@@ -1,2 +1,0 @@
-INDEX VERSION 1.134+/Users/jose.edil/.emacs.d/eglot-java-eclipse-jdt-cache/5d3d71ee7a60831b22938656f6dca1d6/.metadata/.plugins/org.eclipse.jdt.core
-3842426239.index

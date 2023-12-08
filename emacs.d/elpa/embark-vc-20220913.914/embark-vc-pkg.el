@@ -1,2 +1,0 @@
-;;; Generated package description from embark-vc.el  -*- no-byte-compile: t -*-
-(define-package "embark-vc" "20220913.914" "Embark actions for various version control integrations" '((emacs "26.1") (embark "0.13") (forge "0.3") (s "1.12.0")) :commit "316ed8d6c9e3ec7af069efbf2391a977852f067d" :authors '(("Ellis Kenyő <https://github.com/elken>")) :maintainer '("Ellis Kenyő" . "me@elken.dev") :keywords '("convenience" "matching" "terminals" "tools" "unix" "vc") :url "https://github.com/elken/embark-vc")
