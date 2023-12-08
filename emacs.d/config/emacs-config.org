@@ -416,10 +416,10 @@ Emacs looks a lot better when it has a modern monospaced font and VSCode-esque i
 Every Emacs window should, by default occupy all the screen space it can.
 
 #+begin_src emacs-lisp
-  ;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+;;(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (add-to-list 'default-frame-alist '(height . 70))
-(add-to-list 'default-frame-alist '(width . 210))
+(add-to-list 'default-frame-alist '(width . 150))
 ;; (add-to-list 'default-frame-alist '(width . 150))
 (add-to-list 'default-frame-alist '(left . 0))
 (add-to-list 'default-frame-alist '(top . 0))
