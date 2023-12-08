@@ -253,7 +253,7 @@ These libraries are helpful to have around when writing little bits of elisp, li
 Emoji don't work on Emacs versions < 27 (aside from the Mitsuharu Yamamoto emacs-mac port). However, we can just do this.
 
 #+begin_src emacs-lisp
-  (set-fontset-font "fontset-default" 'unicode "Apple Color Emoji" nil 'prepend)
+;;  (set-fontset-font "fontset-default" 'unicode "Apple Color Emoji" nil 'prepend)
 #+end_src
 
 In the name of avoiding RSI, which has become a feared nemesis, I bind ~C-h~ to backwards-delete-char, as per the macOS keybindings. But this means I have to rebind the keys that I actually use for help purposes.
@@ -401,13 +401,22 @@ Emacs looks a lot better when it has a modern monospaced font and VSCode-esque i
 (set-face-attribute 'default nil :font "Fira Code-13")
 (set-face-attribute 'variable-pitch nil :font "Helvetica Neue-12")
 
-(let ((installed (package-installed-p 'all-the-icons)))
-  (use-package all-the-icons)
-  (unless installed (all-the-icons-install-fonts)))
+;; (let ((installed (package-installed-p 'all-the-icons)))
+;;   (use-package all-the-icons)
+;;   (unless installed (all-the-icons-install-fonts)))
 
-(use-package all-the-icons-dired
-  :after all-the-icons
-  :hook (dired-mode . all-the-icons-dired-mode))
+;; (use-package all-the-icons-dired
+;;   :after all-the-icons
+;;   :hook (dired-mode . all-the-icons-dired-mode))
+
+(let ((installed (package-installed-p 'nerd-icons)))
+  (use-package nerd-icons)
+  (unless installed (nerd-icons-install-fonts)))
+
+(use-package nerd-icons-dired
+  :after nerd-icons
+  :hook (dired-mode . nerd-icons-dired-mode))
+
 
 ; Enable ligatures on macos
 (mac-auto-operator-composition-mode t)
@@ -762,51 +771,52 @@ Emacs makes it weirdly hard to just, like, edit a file as root, probably due to 
 Dired needs a couple customizations to work in a sensible manner.
 
 #+begin_src emacs-lisp
-  (setq insert-directory-program "gls")
-  (use-package dired
-      :ensure nil
-      ;;:straight nil
-      :commands (dired dired-jump)
-      :bind (("s-<up>" . dired-single-up-directory))
-      :config
-      (setq dired-listing-switches "-aghoq --group-directories-first"
-            ;;dired-omit-files "^\\.[^.].*"
-            dired-omit-verbose nil
-            dired-hide-details-hide-symlink-targets nil
-            dired-create-destination-dirs 'ask
-            dired-kill-when-opening-new-dired-buffer t
-            dired-do-revert-buffer t
-            dired-mark-region t)
+(setq insert-directory-program "gls")
+(use-package dired
+    :ensure nil
+    ;;:straight nil
+    :commands (dired dired-jump)
+    :bind (("s-<up>" . dired-single-up-directory))
+    :config
+    (setq dired-listing-switches "-aghoq --group-directories-first"
+          ;;dired-omit-files "^\\.[^.].*"
+          dired-omit-verbose nil
+          dired-hide-details-hide-symlink-targets nil
+          dired-create-destination-dirs 'ask
+          dired-kill-when-opening-new-dired-buffer t
+          dired-do-revert-buffer t
+          dired-mark-region t)
 
-      (autoload 'dired-omit-mode "dired-x")
-      (add-hook 'dired-load-hook
-                (lambda ()
-                  (interactive)
-                  (dired-collapse)))
+    (autoload 'dired-omit-mode "dired-x")
+    (add-hook 'dired-load-hook
+              (lambda ()
+                (interactive)
+                (dired-collapse)))
 
-      (add-hook 'dired-mode-hook
-                (lambda ()
-                  (interactive)
-                  (dired-omit-mode 1)
-                  (dired-hide-details-mode 1)
-                  (all-the-icons-dired-mode 1)
-                  (hl-line-mode 1)))
-      )
+    (add-hook 'dired-mode-hook
+              (lambda ()
+                (interactive)
+                (dired-omit-mode 1)
+                (dired-hide-details-mode 1)
+                ;;(all-the-icons-dired-mode 1)
+                (nerd-icons-dired-mode 1)
+                (hl-line-mode 1)))
+    )
 
-  ;; (setq
-  ;;  ;; I use exa, which doesn't have a --dired flag
-  ;;  dired-use-ls-dired nil
-  ;;  ;; Why wouldn't you create destination directories when copying files, Emacs?
-  ;;  dired-create-destination-dirs 'ask
-  ;;  ;; Before the existence of this option, you had to either hack
-  ;;  ;; dired commands or use the dired+ library, the maintainer
-  ;;  ;; of which refuses to use a VCS. So fuck him.
-  ;;  dired-kill-when-opening-new-dired-buffer t
-  ;;  ;; Update directory listings automatically (again, why isn't this default?)
-  ;;  dired-do-revert-buffer t
-  ;;  ;; Sensible mark behavior
-  ;;  dired-mark-region t
-  ;;  )
+;; (setq
+;;  ;; I use exa, which doesn't have a --dired flag
+;;  dired-use-ls-dired nil
+;;  ;; Why wouldn't you create destination directories when copying files, Emacs?
+;;  dired-create-destination-dirs 'ask
+;;  ;; Before the existence of this option, you had to either hack
+;;  ;; dired commands or use the dired+ library, the maintainer
+;;  ;; of which refuses to use a VCS. So fuck him.
+;;  dired-kill-when-opening-new-dired-buffer t
+;;  ;; Update directory listings automatically (again, why isn't this default?)
+;;  dired-do-revert-buffer t
+;;  ;; Sensible mark behavior
+;;  dired-mark-region t
+;;  )
 #+end_src
 
 Dired-single provides a way to reuse the current dired buffer to visit another directory (rather than creating a new buffer for the new directory.
