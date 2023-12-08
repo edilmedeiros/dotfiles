@@ -1,0 +1,6 @@
+;;; -*- lisp-data -*-
+(("/Users/jose.edil/2-development/java/craftinginterpreters/")
+ ("/Users/jose.edil/2-development/cpp/buildyourownlisp/")
+ ("/Users/jose.edil/2-development/haskell/dcpu16-emulator-hs/")
+ ("/Users/jose.edil/2-development/rust/assemblying_pixels/")
+ ("/Users/jose.edil/2-development/haskell/lambda-qoi/"))

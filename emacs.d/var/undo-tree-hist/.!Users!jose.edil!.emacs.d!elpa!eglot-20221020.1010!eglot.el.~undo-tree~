@@ -1,0 +1,6 @@
+(undo-tree-save-format-version . 1)
+"535b549bdad77bce2adee3ccabee614b3d42f045"
+[nil nil nil nil (25461 44544 700088 0) 0 nil]
+([nil nil ((apply -12 57872 58168 undo--wrap-and-run-primitive-undo 57872 58168 (("                            " . 57872) (58123 . 58126) (58046 . 58049) (57969 . 57972) (57872 . 57903) 58141)) (t 25461 34323 423222 486000)) nil (25461 44774 168895 0) 0 nil])
+([nil current ((apply 12 57872 58113 undo--wrap-and-run-primitive-undo 57872 58113 ((#(";; " 0 3 (fontified t face font-lock-comment-delimiter-face)) . -58086) (#(";; " 0 3 (fontified t face font-lock-comment-delimiter-face)) . -58012) (#(";; " 0 3 (fontified t face font-lock-comment-delimiter-face)) . -57938) (#(";; " 0 3 (fontified t face font-lock-comment-delimiter-face)) . -57872) 58125)) (t 25461 44774 178101 420000)) nil (25461 45025 563830 0) 0 nil])
+nil

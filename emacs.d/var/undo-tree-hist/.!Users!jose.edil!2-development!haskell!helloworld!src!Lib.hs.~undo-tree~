@@ -1,0 +1,6 @@
+(undo-tree-save-format-version . 1)
+"667485ac238b2ff29238b4504ab00dab8d346e01"
+[nil nil nil nil (25461 41390 658657 0) 0 nil]
+([nil nil ((58 . 60) (t 25461 40168 924387 399000)) nil (25461 41390 658655 0) 0 nil])
+([nil current ((#(" " 0 1 (fontified t ws-butler-chg chg)) . -58) (undo-tree-id0 . -1) (#(" " 0 1 (fontified t ws-butler-chg chg)) . -59) (undo-tree-id1 . -1) 60) nil (25461 41390 658649 0) 0 nil])
+nil

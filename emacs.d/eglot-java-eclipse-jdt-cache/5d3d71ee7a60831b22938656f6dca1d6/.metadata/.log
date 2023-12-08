@@ -1,0 +1,572 @@
+!SESSION 2023-11-01 15:15:48.124 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_BR
+Command-line arguments:  -data /Users/jose.edil/.emacs.d/eglot-java-eclipse-jdt-cache/5d3d71ee7a60831b22938656f6dca1d6
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:54.090
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:54.355
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:54.414
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:54.417
+!MESSAGE Initializing Java Language Server 1.30.0.202311010123
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:54.418
+!MESSAGE Started org.eclipse.m2e.core 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:55.287
+!MESSAGE ProjectRegistryRefreshJob finished 868ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:55.349
+!MESSAGE Started org.eclipse.buildship.core 62ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:56.704
+!MESSAGE Default VM Install changed from  null to com.oracle.java.jdk-/opt/local/Library/Java/JavaVirtualMachines/jdk-21-oracle-java-se.jdk/Contents/Home
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:56.720
+!MESSAGE Setting java.home /usr as default global VM
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:56.725
+!MESSAGE Default VM Install changed from  com.oracle.java.jdk-/opt/local/Library/Java/JavaVirtualMachines/jdk-21-oracle-java-se.jdk/Contents/Home to 1698862556720-/usr
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:57.223
+!MESSAGE JVM Runtimes changed, saving new configuration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:57.251
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:57.252
+!MESSAGE Non-Static Commands: [java.project.import, java.navigate.openTypeHierarchy, java.project.resolveStackTraceLocation, java.edit.handlePasteEvent, java.edit.stringFormatting, java.project.getSettings, java.project.resolveWorkspaceSymbol, java.project.upgradeGradle, java.project.createModuleInfo, java.edit.organizeImports, java.project.refreshDiagnostics, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.getAll, java.reloadBundles, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.smartSemicolonDetection, java.project.updateSourceAttachment, java.decompile, java.protobuf.generateSources, java.project.resolveSourceAttachment, java.project.addToSourcePath, java.completion.onDidSelect]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:57.271
+!MESSAGE RepositoryRegistryUpdateJob finished 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:57.283
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:57.305
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:57.382
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:57.427
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:15:57.432
+!MESSAGE No previous Gradle project at /Users/jose.edil/2-development/java/craftinginterpreters, it must be synchronized
+
+!ENTRY org.eclipse.buildship.core 2 3 2023-11-01 15:16:01.307
+!MESSAGE Synchronize project craftinginterpreters failed due to an error connecting to the Gradle build.
+!STACK 0
+org.gradle.tooling.GradleConnectionException: Could not run phased build action using connection to Gradle distribution 'https://services.gradle.org/distributions/gradle-8.4-bin.zip'.
+	at org.gradle.tooling.internal.consumer.ExceptionTransformer.transform(ExceptionTransformer.java:55)
+	at org.gradle.tooling.internal.consumer.ExceptionTransformer.transform(ExceptionTransformer.java:29)
+	at org.gradle.tooling.internal.consumer.ResultHandlerAdapter.onFailure(ResultHandlerAdapter.java:43)
+	at org.gradle.tooling.internal.consumer.async.DefaultAsyncConsumerActionExecutor$1$1.run(DefaultAsyncConsumerActionExecutor.java:69)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at org.gradle.tooling.internal.consumer.BlockingResultHandler.getResult(BlockingResultHandler.java:46)
+	at org.gradle.tooling.internal.consumer.DefaultPhasedBuildActionExecuter.run(DefaultPhasedBuildActionExecuter.java:63)
+	at org.gradle.tooling.internal.consumer.DefaultPhasedBuildActionExecuter.run(DefaultPhasedBuildActionExecuter.java:31)
+	at org.eclipse.buildship.core.internal.workspace.EclipseModelUtils.runPhasedModelQuery(EclipseModelUtils.java:111)
+	at org.eclipse.buildship.core.internal.workspace.EclipseModelUtils.runTasksAndQueryCompositeModelWithRuntimInfo(EclipseModelUtils.java:86)
+	at org.eclipse.buildship.core.internal.workspace.EclipseModelUtils.runTasksAndQueryModels(EclipseModelUtils.java:60)
+	at org.eclipse.buildship.core.internal.workspace.DefaultModelProvider.lambda$fetchEclipseProjectAndRunSyncTasks$4(DefaultModelProvider.java:75)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$GradleConnectionOperation.runInToolingApi(DefaultGradleBuild.java:331)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager$WorkspaceRunnableAdapter.run(DefaultToolingApiOperationManager.java:58)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2453)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2478)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:39)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.withConnection(DefaultGradleBuild.java:124)
+	at org.eclipse.buildship.core.internal.workspace.DefaultModelProvider.lambda$fetchEclipseProjectAndRunSyncTasks$5(DefaultModelProvider.java:75)
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:4853)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3529)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2278)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2155)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2045)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3951)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4848)
+	at org.eclipse.buildship.core.internal.workspace.DefaultModelProvider.getFromCache(DefaultModelProvider.java:98)
+	at org.eclipse.buildship.core.internal.workspace.DefaultModelProvider.executeOperation(DefaultModelProvider.java:90)
+	at org.eclipse.buildship.core.internal.workspace.DefaultModelProvider.fetchEclipseProjectAndRunSyncTasks(DefaultModelProvider.java:72)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.runInToolingApi(DefaultGradleBuild.java:228)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager$WorkspaceRunnableAdapter.run(DefaultToolingApiOperationManager.java:58)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2453)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2478)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:39)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.run(DefaultGradleBuild.java:194)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:102)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:88)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.startSynchronization(GradleProjectImporter.java:439)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importDir(GradleProjectImporter.java:327)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importToWorkspace(GradleProjectImporter.java:212)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.importProjects(ProjectsManager.java:154)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:116)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.runInWorkspace(InitHandler.java:260)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.gradle.launcher.daemon.client.DaemonConnectionException: The newly created daemon process has a different context than expected.
+It won't be possible to reconnect to this daemon. Context mismatch: 
+Java home is different.
+Wanted: DefaultDaemonContext[uid=null,javaHome=/usr,daemonRegistryDir=/Users/jose.edil/.gradle/daemon,pid=92153,idleTimeout=null,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=BR,-Duser.language=en,-Duser.variant]
+Actual: DefaultDaemonContext[uid=d8d5ad07-f6f9-4f9e-b6cc-ad29abaa7bb0,javaHome=/opt/local/Library/Java/JavaVirtualMachines/jdk-21-oracle-java-se.jdk/Contents/Home,daemonRegistryDir=/Users/jose.edil/.gradle/daemon,pid=92164,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=BR,-Duser.language=en,-Duser.variant]
+
+	at org.gradle.launcher.daemon.client.DefaultDaemonConnector.connectToDaemonWithId(DefaultDaemonConnector.java:258)
+	at org.gradle.launcher.daemon.client.DefaultDaemonConnector.doStartDaemon(DefaultDaemonConnector.java:227)
+	at org.gradle.launcher.daemon.client.DefaultDaemonConnector.startDaemon(DefaultDaemonConnector.java:216)
+	at org.gradle.launcher.daemon.client.DaemonClient.execute(DaemonClient.java:163)
+	at org.gradle.launcher.daemon.client.DaemonClient.execute(DaemonClient.java:98)
+	at org.gradle.tooling.internal.provider.DaemonBuildActionExecuter.execute(DaemonBuildActionExecuter.java:44)
+	at org.gradle.tooling.internal.provider.DaemonBuildActionExecuter.execute(DaemonBuildActionExecuter.java:30)
+	at org.gradle.tooling.internal.provider.LoggingBridgingBuildActionExecuter.execute(LoggingBridgingBuildActionExecuter.java:56)
+	at org.gradle.tooling.internal.provider.LoggingBridgingBuildActionExecuter.execute(LoggingBridgingBuildActionExecuter.java:37)
+	at org.gradle.tooling.internal.provider.ProviderConnection.run(ProviderConnection.java:230)
+	at org.gradle.tooling.internal.provider.ProviderConnection.runPhasedAction(ProviderConnection.java:189)
+	at org.gradle.tooling.internal.provider.DefaultConnection.run(DefaultConnection.java:184)
+	at org.gradle.tooling.internal.consumer.connection.PhasedActionAwareConsumerConnection.run(PhasedActionAwareConsumerConnection.java:56)
+	at org.gradle.tooling.internal.consumer.connection.ParameterValidatingConsumerConnection.run(ParameterValidatingConsumerConnection.java:62)
+	at org.gradle.tooling.internal.consumer.DefaultPhasedBuildActionExecuter$1.run(DefaultPhasedBuildActionExecuter.java:78)
+	at org.gradle.tooling.internal.consumer.DefaultPhasedBuildActionExecuter$1.run(DefaultPhasedBuildActionExecuter.java:70)
+	at org.gradle.tooling.internal.consumer.connection.LazyConsumerActionExecutor.run(LazyConsumerActionExecutor.java:143)
+	at org.gradle.tooling.internal.consumer.connection.CancellableConsumerActionExecutor.run(CancellableConsumerActionExecutor.java:45)
+	at org.gradle.tooling.internal.consumer.connection.ProgressLoggingConsumerActionExecutor.run(ProgressLoggingConsumerActionExecutor.java:61)
+	at org.gradle.tooling.internal.consumer.connection.RethrowingErrorsConsumerActionExecutor.run(RethrowingErrorsConsumerActionExecutor.java:38)
+	at org.gradle.tooling.internal.consumer.async.DefaultAsyncConsumerActionExecutor$1$1.run(DefaultAsyncConsumerActionExecutor.java:67)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-01 15:16:02.843
+!MESSAGE Could not fetch model of type 'Map' using connection to Gradle distribution 'https://services.gradle.org/distributions/gradle-8.4-bin.zip'.
+!STACK 0
+org.gradle.tooling.GradleConnectionException: Could not fetch model of type 'Map' using connection to Gradle distribution 'https://services.gradle.org/distributions/gradle-8.4-bin.zip'.
+	at org.gradle.tooling.internal.consumer.ExceptionTransformer.transform(ExceptionTransformer.java:55)
+	at org.gradle.tooling.internal.consumer.ExceptionTransformer.transform(ExceptionTransformer.java:29)
+	at org.gradle.tooling.internal.consumer.ResultHandlerAdapter.onFailure(ResultHandlerAdapter.java:43)
+	at org.gradle.tooling.internal.consumer.async.DefaultAsyncConsumerActionExecutor$1$1.run(DefaultAsyncConsumerActionExecutor.java:69)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+	at org.gradle.tooling.internal.consumer.BlockingResultHandler.getResult(BlockingResultHandler.java:46)
+	at org.gradle.tooling.internal.consumer.DefaultModelBuilder.get(DefaultModelBuilder.java:51)
+	at org.eclipse.buildship.core.internal.util.gradle.CompatProjectConnection$CompatModelBuilder.get(CompatProjectConnection.java:272)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleBuildSupport.lambda$0(GradleBuildSupport.java:146)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$GradleConnectionOperation.runInToolingApi(DefaultGradleBuild.java:331)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager$WorkspaceRunnableAdapter.run(DefaultToolingApiOperationManager.java:58)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2453)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2478)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:39)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.withConnection(DefaultGradleBuild.java:124)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.withConnection(DefaultGradleBuild.java:114)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleBuildSupport.syncAnnotationProcessingConfiguration(GradleBuildSupport.java:145)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleUtils.synchronizeAnnotationProcessingConfiguration(GradleUtils.java:301)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importToWorkspace(GradleProjectImporter.java:291)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.importProjects(ProjectsManager.java:154)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:116)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.runInWorkspace(InitHandler.java:260)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.gradle.launcher.daemon.client.DaemonConnectionException: The newly created daemon process has a different context than expected.
+It won't be possible to reconnect to this daemon. Context mismatch: 
+Java home is different.
+Wanted: DefaultDaemonContext[uid=null,javaHome=/usr,daemonRegistryDir=/Users/jose.edil/.gradle/daemon,pid=92153,idleTimeout=null,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=BR,-Duser.language=en,-Duser.variant]
+Actual: DefaultDaemonContext[uid=1cc2af62-df1f-419b-b6fc-a102405f047d,javaHome=/opt/local/Library/Java/JavaVirtualMachines/jdk-21-oracle-java-se.jdk/Contents/Home,daemonRegistryDir=/Users/jose.edil/.gradle/daemon,pid=92165,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=BR,-Duser.language=en,-Duser.variant]
+
+	at org.gradle.launcher.daemon.client.DefaultDaemonConnector.connectToDaemonWithId(DefaultDaemonConnector.java:258)
+	at org.gradle.launcher.daemon.client.DefaultDaemonConnector.doStartDaemon(DefaultDaemonConnector.java:227)
+	at org.gradle.launcher.daemon.client.DefaultDaemonConnector.startDaemon(DefaultDaemonConnector.java:216)
+	at org.gradle.launcher.daemon.client.DaemonClient.execute(DaemonClient.java:163)
+	at org.gradle.launcher.daemon.client.DaemonClient.execute(DaemonClient.java:98)
+	at org.gradle.tooling.internal.provider.DaemonBuildActionExecuter.execute(DaemonBuildActionExecuter.java:44)
+	at org.gradle.tooling.internal.provider.DaemonBuildActionExecuter.execute(DaemonBuildActionExecuter.java:30)
+	at org.gradle.tooling.internal.provider.LoggingBridgingBuildActionExecuter.execute(LoggingBridgingBuildActionExecuter.java:56)
+	at org.gradle.tooling.internal.provider.LoggingBridgingBuildActionExecuter.execute(LoggingBridgingBuildActionExecuter.java:37)
+	at org.gradle.tooling.internal.provider.ProviderConnection.run(ProviderConnection.java:230)
+	at org.gradle.tooling.internal.provider.ProviderConnection.run(ProviderConnection.java:152)
+	at org.gradle.tooling.internal.provider.DefaultConnection.getModel(DefaultConnection.java:149)
+	at org.gradle.tooling.internal.consumer.connection.CancellableModelBuilderBackedModelProducer.produceModel(CancellableModelBuilderBackedModelProducer.java:54)
+	at org.gradle.tooling.internal.consumer.connection.PluginClasspathInjectionSupportedCheckModelProducer.produceModel(PluginClasspathInjectionSupportedCheckModelProducer.java:38)
+	at org.gradle.tooling.internal.consumer.connection.AbstractConsumerConnection.run(AbstractConsumerConnection.java:64)
+	at org.gradle.tooling.internal.consumer.connection.ParameterValidatingConsumerConnection.run(ParameterValidatingConsumerConnection.java:49)
+	at org.gradle.tooling.internal.consumer.DefaultModelBuilder$1.run(DefaultModelBuilder.java:64)
+	at org.gradle.tooling.internal.consumer.connection.LazyConsumerActionExecutor.run(LazyConsumerActionExecutor.java:143)
+	at org.gradle.tooling.internal.consumer.connection.CancellableConsumerActionExecutor.run(CancellableConsumerActionExecutor.java:45)
+	at org.gradle.tooling.internal.consumer.connection.ProgressLoggingConsumerActionExecutor.run(ProgressLoggingConsumerActionExecutor.java:61)
+	at org.gradle.tooling.internal.consumer.connection.RethrowingErrorsConsumerActionExecutor.run(RethrowingErrorsConsumerActionExecutor.java:38)
+	at org.gradle.tooling.internal.consumer.async.DefaultAsyncConsumerActionExecutor$1$1.run(DefaultAsyncConsumerActionExecutor.java:67)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:16:02.856
+!MESSAGE Workspace initialized in 5586ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:16:02.875
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:16:02.881
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:16:02.884
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-01 15:16:03.057
+!MESSAGE Error occured while building workspace. Details: 
+ message: Could not run phased build action using connection to Gradle distribution 'https://services.gradle.org/distributions/gradle-8.4-bin.zip'.
+The newly created daemon process has a different context than expected.
+It won't be possible to reconnect to this daemon. Context mismatch: 
+Java home is different.
+Wanted: DefaultDaemonContext[uid=null,javaHome=/usr,daemonRegistryDir=/Users/jose.edil/.gradle/daemon,pid=92153,idleTimeout=null,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=BR,-Duser.language=en,-Duser.variant]
+Actual: DefaultDaemonContext[uid=d8d5ad07-f6f9-4f9e-b6cc-ad29abaa7bb0,javaHome=/opt/local/Library/Java/JavaVirtualMachines/jdk-21-oracle-java-se.jdk/Contents/Home,daemonRegistryDir=/Users/jose.edil/.gradle/daemon,pid=92164,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=BR,-Duser.language=en,-Duser.variant]; code: 0; resource: /Users/jose.edil/2-development/java/craftinginterpreters;
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-01 15:16:03.147
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:36:56.000
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:01.427
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:06.180
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:07.884
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:09.562
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:12.356
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:17.207
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:18.100
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:21.499
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:22.437
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:25.468
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:38.795
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:41.054
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:42.588
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:43.521
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:45.009
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:46.399
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:49.138
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:51.248
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:56.186
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:37:57.418
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 11:38:02.018
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:14:42.352
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:14:46.351
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:14:47.882
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:14:49.776
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:14:50.951
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:14:52.010
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:14:54.390
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:14:55.066
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:15:00.638
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:15:09.596
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:15:14.014
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:15:19.537
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:15:20.787
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:15:30.589
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:15:32.023
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:15:33.961
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:15:34.841
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-02 12:15:39.189
+!MESSAGE file:///Users/jose.edil/2-development/java/craftinginterpreters/app/src/main/java/com/craftinginterpreters/lox/Lox.java does not resolve to a ICompilationUnit
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-02 12:17:43.791
+!MESSAGE file:///Users/jose.edil/2-development/java/craftinginterpreters/app/src/main/java/com/craftinginterpreters/lox/Lox.java does not resolve to a ICompilationUnit
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-02 12:17:46.622
+!MESSAGE file:///Users/jose.edil/2-development/java/craftinginterpreters/app/src/main/java/com/craftinginterpreters/lox/Lox.java does not resolve to a ICompilationUnit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:20:47.400
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 12:20:49.174
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-02 12:20:56.045
+!MESSAGE file:///Users/jose.edil/2-development/java/craftinginterpreters/app/src/main/java/com/craftinginterpreters/lox/Lox.java does not resolve to a ICompilationUnit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:13:24.125
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:13:26.588
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:13:28.551
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:13:33.331
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:13:37.713
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:13:39.238
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:13:40.826
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:13:42.596
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:13:45.018
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:13:46.510
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:13:50.449
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:13:52.426
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:13:55.385
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:13:57.544
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:14:02.115
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:14:04.870
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:14:09.503
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:14:12.796
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:14:16.559
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:14:17.467
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:14:18.285
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:14:28.499
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-02 17:14:37.519
+!MESSAGE file:///Users/jose.edil/2-development/java/craftinginterpreters/app/src/main/java/com/craftinginterpreters/lox/Lox.java does not resolve to a ICompilationUnit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:15:27.438
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:15:29.544
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-02 17:15:32.856
+!MESSAGE file:///Users/jose.edil/2-development/java/craftinginterpreters/app/src/main/java/com/craftinginterpreters/lox/Lox.java does not resolve to a ICompilationUnit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:15:43.097
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:15:50.187
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:15:52.116
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:15:56.524
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:15:58.464
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:15:59.079
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-02 17:16:01.013
+!MESSAGE file:///Users/jose.edil/2-development/java/craftinginterpreters/app/src/main/java/com/craftinginterpreters/lox/Lox.java does not resolve to a ICompilationUnit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:16:32.396
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:16:33.665
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:16:34.552
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:16:37.039
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:16:39.398
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:16:40.380
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:16:43.752
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:16:45.508
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-02 17:16:47.908
+!MESSAGE file:///Users/jose.edil/2-development/java/craftinginterpreters/app/src/main/java/com/craftinginterpreters/lox/Lox.java does not resolve to a ICompilationUnit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:17:20.542
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:17:21.155
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:17:21.826
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:17:23.772
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 17:17:26.328
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-02 17:17:28.160
+!MESSAGE file:///Users/jose.edil/2-development/java/craftinginterpreters/app/src/main/java/com/craftinginterpreters/lox/Lox.java does not resolve to a ICompilationUnit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 18:36:52.642
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-02 18:36:53.332
+!MESSAGE file:///Users/jose.edil/2-development/java/craftinginterpreters/app/src/main/java/com/craftinginterpreters/lox/Lox.java does not resolve to a ICompilationUnit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 18:37:18.052
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-02 18:37:18.319
+!MESSAGE file:///Users/jose.edil/2-development/java/craftinginterpreters/app/src/main/java/com/craftinginterpreters/lox/Lox.java does not resolve to a ICompilationUnit
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-02 18:55:07.763
+!MESSAGE file:///Users/jose.edil/2-development/java/craftinginterpreters/app/src/main/java/com/craftinginterpreters/lox/Lox.java does not resolve to a ICompilationUnit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 18:55:11.210
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 18:55:13.192
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 18:55:13.951
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 18:55:19.137
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 18:55:21.513
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 18:55:23.932
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 18:55:25.566
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 18:55:27.901
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 18:55:31.183
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 18:55:32.937
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 18:55:34.017
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2023-11-02 18:55:35.295
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2023-11-02 18:55:36.797
+!MESSAGE file:///Users/jose.edil/2-development/java/craftinginterpreters/app/src/main/java/com/craftinginterpreters/lox/Lox.java does not resolve to a ICompilationUnit

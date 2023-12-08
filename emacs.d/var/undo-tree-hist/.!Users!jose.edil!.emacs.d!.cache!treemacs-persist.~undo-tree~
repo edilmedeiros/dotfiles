@@ -1,0 +1,217 @@
+(undo-tree-save-format-version . 1)
+"6d734c66f6eaa54563e7cdbd44ee7aee87133b09"
+[nil nil nil nil (25461 22886 297250 0) 0 nil]
+([nil nil ((1 . 71) (t . -1)) nil (25461 22886 297244 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25461 22886 299079 317000)) nil (25461 33212 172471 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25461 33212 175849 815000)) nil (25461 33399 76800 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25461 33399 84133 905000)) nil (25461 35775 3645 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25461 35775 11495 454000)) nil (25461 37826 596711 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25461 37826 604030 973000)) nil (25461 39412 734028 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25461 39412 741517 815000)) nil (25461 39851 426685 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25461 39851 430090 591000)) nil (25461 40180 494362 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25461 40180 498072 788000)) nil (25461 41390 774374 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** helloworld
+ - path :: ~/2-development/haskell/helloworld
+" . 1) (t 25461 41390 777861 883000)) nil (25461 41834 909749 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25461 41834 912857 786000)) nil (25461 43242 389449 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25461 43242 391135 748000)) nil (25461 43523 726092 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25461 43523 729539 808000)) nil (25461 43589 467814 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25461 43589 471650 471000)) nil (25461 43832 318684 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25461 43832 322191 425000)) nil (25461 43870 784060 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25461 43870 787469 653000)) nil (25461 43948 902648 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25461 43948 907235 398000)) nil (25461 44093 183573 0) 0 nil])
+([nil nil ((1 . 74) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25461 44093 187014 259000)) nil (25461 44185 653780 0) 0 nil])
+([nil nil ((1 . 74) ("* Default
+** rustingpixels
+ - path :: ~/2-development/rust/rustingpixels
+" . 1) (t 25461 44185 657313 947000)) nil (25461 44776 227193 0) 0 nil])
+([nil nil ((1 . 74) ("* Default
+** rustingpixels
+ - path :: ~/2-development/rust/rustingpixels
+" . 1) (t 25461 44776 231026 392000)) nil (25461 45062 172649 0) 0 nil])
+([nil nil ((1 . 74) ("* Default
+** rustingpixels
+ - path :: ~/2-development/rust/rustingpixels
+" . 1) (t 25461 45062 176640 352000)) nil (25461 45255 492594 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** rustingpixels
+ - path :: ~/2-development/rust/rustingpixels
+" . 1) (t 25461 45255 500071 384000)) nil (25461 45549 463418 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25461 45549 465163 818000)) nil (25461 45759 3304 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25461 45759 7016 793000)) nil (25461 46089 898582 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25461 46089 901772 860000)) nil (25461 46216 985702 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25461 46216 988957 43000)) nil (25461 46711 364908 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25461 46711 368924 553000)) nil (25461 48419 815772 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25461 48419 824126 563000)) nil (25462 13531 809223 0) 0 nil])
+([nil nil ((1 . 73) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25462 13531 814244 907000)) nil (25462 20266 42756 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** 2023-fdl-fact
+ - path :: ~/0-research/papers/2023-fdl-fact
+" . 1) (t 25462 20266 46309 740000)) nil (25462 32509 201282 0) 0 nil])
+([nil nil ((1 . 79) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25462 32509 205361 762000)) nil (25462 44902 483993 0) 0 nil])
+([nil nil ((1 . 63) ("* Default
+** 2022-date-rivika
+ - path :: ~/0-research/papers/2022-date-rivika
+" . 1) (t 25462 44902 487718 749000)) nil (25462 57588 148042 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** rivika
+ - path :: ~/2-development/haskell/rivika
+" . 1) (t 25462 57588 152241 904000)) nil (25467 48883 507531 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 48883 510225 241000)) nil (25467 50155 115330 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 50155 119631 361000)) nil (25467 51629 118498 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 51629 126459 217000)) nil (25467 51864 196122 0) 0 nil])
+([nil nil ((1 . 74) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 51864 200145 61000)) nil (25467 52387 447513 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** rustingpixels
+ - path :: ~/2-development/rust/rustingpixels
+" . 1) (t 25467 52387 452043 729000)) nil (25467 52510 143046 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 52510 146719 313000)) nil (25467 52718 454550 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 52718 458591 919000)) nil (25467 52900 426951 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 52900 430574 77000)) nil (25467 52977 795923 0) 0 nil])
+([nil nil ((1 . 73) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 52977 799737 198000)) nil (25467 53107 746842 0) 0 nil])
+([nil nil ((1 . 74) ("* Default
+** 2023-fdl-fact
+ - path :: ~/0-research/papers/2023-fdl-fact
+" . 1) (t 25467 53107 751847 168000)) nil (25467 53304 990803 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** rustingpixels
+ - path :: ~/2-development/rust/rustingpixels
+" . 1) (t 25467 53304 994651 322000)) nil (25467 53564 850577 0) 0 nil])
+([nil nil ((1 . 64) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 53564 854846 225000)) nil (25467 53665 363773 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** cs50-ai
+ - path :: ~/2-development/python/cs50-ai
+" . 1) (t 25467 53665 368657 589000)) nil (25467 53742 235618 0) 0 nil])
+([nil nil ((1 . 74) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 53742 239685 924000)) nil (25467 56041 954335 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** rustingpixels
+ - path :: ~/2-development/rust/rustingpixels
+" . 1) (t 25467 56041 959235 822000)) nil (25467 56374 325059 0) 0 nil])
+([nil nil ((1 . 74) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 56374 327758 939000)) nil (25467 56700 202576 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** rustingpixels
+ - path :: ~/2-development/rust/rustingpixels
+" . 1) (t 25467 56700 207232 743000)) nil (25467 58464 979039 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 58464 983525 848000)) nil (25467 61748 502082 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 61748 506987 950000)) nil (25467 62110 864794 0) 0 nil])
+([nil nil ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 62110 869352 215000)) nil (25467 63526 490345 0) 0 nil])
+([nil current ((1 . 71) ("* Default
+** lambda-qoi
+ - path :: ~/2-development/haskell/lambda-qoi
+" . 1) (t 25467 63526 495682 289000)) nil (25468 7269 637311 0) 0 nil])
+nil
