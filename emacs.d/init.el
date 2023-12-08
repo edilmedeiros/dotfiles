@@ -25,8 +25,9 @@
 
 (eval-when-compile
   (require 'use-package)
-  (require 'org-install)
-  (require 'ob-tangle))
+;;  (require 'org-install)
+  ;;  (require 'ob-tangle)
+  )
 
 (defun reload-config ()
   "Reload the literate config from ~/.emacs.d/config/emacs/emacs.org."
