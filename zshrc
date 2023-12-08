@@ -121,6 +121,6 @@ source ~/.iterm2_shell_integration.zsh
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-eval "$(rbenv init - zsh)"
+# eval "$(rbenv init - zsh)"
 
 export STM32CubeMX_PATH=/Applications/STMicroelectronics/STM32CubeMX.app/Contents/Resources
