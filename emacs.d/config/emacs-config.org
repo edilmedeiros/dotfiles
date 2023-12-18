@@ -36,8 +36,8 @@ Many of Emacs's defaults are ill-suited for my purposes, but the first one that 
 The most useful Emacs command is ~execute-extended-command~. It should be painless to access from the home row. (~bind-key*~ ensures that this setting is propagated through all major modes, which saves us a bunch of ~unbind-key~ calls in ~use-package~ stanzas.) Why not something even easier, like ~C-;~, you ask? Unfortunately, macOS Terminal.app swallows that keybinding and does nothing with it. I'm sure this is correct behavior by some sort of standard, but I have to work around it, since occasionally I do use Emacs in the terminal.
 
 #+begin_src emacs-lisp
-  (bind-key* "C-c ;" #'execute-extended-command)
-  (bind-key* "C-c 4" #'execute-extended-command) ;; for a purely left-handed combo
+  (bind-key* "C-c ;" #'counsel-M-x)
+  (bind-key* "C-c 4" #'counsel-M-x) ;; for a purely left-handed combo
   (bind-key* "C-c C-;" #'execute-extended-command-for-buffer)
 #+end_src
 
