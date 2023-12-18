@@ -1966,6 +1966,7 @@ Experimeting with eglot instead of lsp-mode
               ("C-c C-c" . #'eglot-code-actions))
   :custom
   (eglot-autoshutdown t)
+  (eglot-confirm-server-initiated-edits nil)
   ;; :config
   ;; (add-to-list 'eglot-server-programs '(rust-mode "rust-analyzer"))
   ;; (add-to-list 'eglot-server-programs '(haskell-mode ("haskell-language-server-wrapper" "--lsp")))
