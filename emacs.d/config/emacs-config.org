@@ -14,6 +14,9 @@ Set personal information.
 
 * Configuration: start
 ** Preliminaries
+
+Based on https://blog.sumtypeofway.com/posts/emacs-config.html.
+
 We have to be sure to set ~lexical-binding~ in the file header to opt into Emacs lexical scope. Emacs Lisp really isn't the worst language once you pull in the community's /de facto/ standard libraries, but you need lexical scope.
 
 #+begin_src emacs-lisp
@@ -948,7 +951,6 @@ We need to support reading large blobs of data for LSP's sake.
   (setq read-process-output-max (* 1024 1024)) ; 1mb
 #+end_src
 
-When I hit, accidentally or purposefully, a key chord that forms the prefix of some other chords, I want to see a list of possible completions and their info.
 When I hit, accidentally or purposefully, a key chord that forms the prefix of some other chords, I want to see a list of possible completions and their info.
 
 #+begin_src emacs-lisp
@@ -2000,6 +2002,23 @@ Experimeting with eglot instead of lsp-mode
 
   #+end_src
 
+Snippets support.
+
+#+begin_src emacs-lisp
+(use-package yasnippet
+  :defer 15 ;; takes a while to load, do it async
+  :diminish yas-minor-mode
+  :config (yas-global-mode)
+  :custom (yas-prompt-functions '(yas-completing-prompt)))
+  ;; :commands yas-minor-mode
+  ;; :hook (
+  ;;        (go-mode . yas-minor-mode)
+  ;;        (python-mode . yas-minor-mode)
+  ;;        ))
+
+#+end_src
+
+I'm not using LSP-mode anymore in favor of eglot.
 
 #+begin_src emacs-lisp
 ;; (use-package lsp-mode
@@ -2052,13 +2071,6 @@ Experimeting with eglot instead of lsp-mode
 ;;   :ensure t
 ;;   :init
 ;;   (global-flycheck-mode))
-
-;; (use-package yasnippet
-;;   :commands yas-minor-mode
-;;   :hook (
-;;          (go-mode . yas-minor-mode)
-;;          (python-mode . yas-minor-mode)
-;;          ))
 
 ;; (setq lsp-ui-doc-enable t
 ;;       lsp-ui-peek-enable t
@@ -2149,6 +2161,10 @@ See: https://alpha2phi.medium.com/emacs-lsp-and-dap-7c1786282324
   )
 
 (use-package ormolu)
+
+(use-package haskell-snippets
+  :after (haskell-mode yasnippet)
+  :defer)
 
   ;; :delight "λ"
   ;; :config
@@ -2548,9 +2564,9 @@ Navigate windows and frames using numbers !
   :hook (prog-mode . company-mode)
   :init (global-company-mode)
   :bind
-  (:map company-active-map
-	      ;;("TAB" . company-complete-selection)
-        ("TAB" . company-indent-or-complete-common)
+  (:map company-mode-map
+	      ;;("M-TAB" . company-complete-selection)
+        ("M-TAB" . company-indent-or-complete-common)
 	      ("C-n" . company-select-next)
 	      ("C-p" . company-select-previous)
 	      ("M-<" . company-select-first)
@@ -2604,11 +2620,12 @@ Navigate windows and frames using numbers !
   )
 #+end_src
 
-** YAML
-Add Yaml Mode
+** Configuration
+
 #+begin_src emacs-lisp
-;; (use-package yaml-mode
-;;   :ensure t)
+(use-package yaml-mode :defer t)
+(use-package dockerfile-mode :defer t)
+(use-package toml-mode :defer t)
 #+end_src
 
 * Org Mode
