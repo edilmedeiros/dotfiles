@@ -2544,7 +2544,7 @@ Navigate windows and frames using numbers !
 #+BEGIN_SRC emacs-lisp
   (use-package company
     :ensure
-    :after lsp-mode
+  ;  :after lsp-mode
     :hook (prog-mode . company-mode)
   ;  :init (global-company-mode)
     :bind
@@ -2768,16 +2768,16 @@ Enable RefTex.
 ** Grammarly
 Requires https://github.com/emacs-grammarly/lsp-grammarly and https://emacs-lsp.github.io/lsp-mode/page/lsp-grammarly/
 #+begin_src emacs-lisp
-(use-package lsp-grammarly
-  :ensure t
-  ;; :hook ((text-mode . (lambda ()
-  ;;                      (require 'lsp-grammarly)
-  ;;                      (lsp)))
-  ;; (markdown-mode . (lambda ()
-  ;;                    (require 'lsp-grammarly)
-  ;;                    (lsp)))
-  ;; )
-  )
+;; (use-package lsp-grammarly
+;;   :ensure t
+;;   ;; :hook ((text-mode . (lambda ()
+;;   ;;                      (require 'lsp-grammarly)
+;;   ;;                      (lsp)))
+;;   ;; (markdown-mode . (lambda ()
+;;   ;;                    (require 'lsp-grammarly)
+;;   ;;                    (lsp)))
+;;   ;; )
+;;   )
 #+end_src
 
 * Ispell
