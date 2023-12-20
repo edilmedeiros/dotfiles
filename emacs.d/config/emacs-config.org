@@ -2542,40 +2542,32 @@ Navigate windows and frames using numbers !
 ** Company mode
    Enable Company mode, a text completion framework.
 #+BEGIN_SRC emacs-lisp
-  (use-package company
-    :ensure
-  ;  :after lsp-mode
-    :hook (prog-mode . company-mode)
-  ;  :init (global-company-mode)
-    :bind
-    (:map company-active-map
-	  ("<tab>" . company-complete-selection)
-	  ("C-n" . company-select-next)
-	  ("C-p" . company-select-previous)
-	  ("M-<" . company-select-first)
-	  ("M->" . company-select-last))
-    ;;(:map lsp-mode-map
-	  ;;("<tab>" . company-indent-or-complete-common))
-    :custom
-    (company-minimum-prefix-length 1)
-    (company-idle-delay 0.5)
-    ;;(company-begin-commands nil) ;; uncomment to disable popup
-    (company-tooltip-align-annotations t)
-    (company-show-numbers t)
-    (company-dabbrev-downcase nil)
-    ;; :config
-    ;; (progn
-    ;;   ;; Use Company for completion
-    ;;   (bind-key [remap completion-at-point] #'company-complete company-mode-map)
+(use-package company
+  :ensure
+;  :after lsp-mode
+  :hook (prog-mode . company-mode)
+;  :init (global-company-mode)
+  :bind
+  (:map company-active-map
+	      ;;("<tab>" . company-complete-selection)
+        ("<tab>" . company-indent-or-complete-common)
+	      ("C-n" . company-select-next)
+	      ("C-p" . company-select-previous)
+	      ("M-<" . company-select-first)
+	      ("M->" . company-select-last))
+  ;;(:map lsp-mode-map
+	;;("<tab>" . company-indent-or-complete-common))
+  :custom
+  (company-minimum-prefix-length 1)
+  (company-idle-delay 0.5)
+  ;;(company-begin-commands nil) ;; uncomment to disable popup
+  (company-tooltip-align-annotations t)
+  (company-show-numbers t)
+  (company-dabbrev-downcase nil)
+  :diminish company-mode)
 
-    ;;   (setq company-tooltip-align-annotations t
-    ;;         ;; Easy navigation to candidates with M-<n>
-    ;;         company-show-numbers t)
-    ;;   (setq company-dabbrev-downcase nil))
-    :diminish company-mode)
-
-  (use-package company-box
-    :hook (company-mode . company-box-mode))
+(use-package company-box
+  :hook (company-mode . company-box-mode))
 #+END_SRC
 
 ** Markdown
