@@ -888,7 +888,7 @@ dired-subtree defines the function `dired-subtree-insert` which inserts a subdir
     (:map dired-mode-map
           ("i" . je/dired-subtree-insert)
           (";" . je/dired-subtree-remove)
-          ("<tab>" . je/dired-subtree-toggle)
+          ("TAB" . je/dired-subtree-toggle)
           ("<backtab>" . je/dired-subtree-cycle)))
 
   ;; Define custom functioons to always revert the dired buffer to keep icons nice!
@@ -2546,17 +2546,17 @@ Navigate windows and frames using numbers !
   :ensure
 ;  :after lsp-mode
   :hook (prog-mode . company-mode)
-;  :init (global-company-mode)
+  :init (global-company-mode)
   :bind
   (:map company-active-map
-	      ;;("<tab>" . company-complete-selection)
-        ("<tab>" . company-indent-or-complete-common)
+	      ;;("TAB" . company-complete-selection)
+        ("TAB" . company-indent-or-complete-common)
 	      ("C-n" . company-select-next)
 	      ("C-p" . company-select-previous)
 	      ("M-<" . company-select-first)
 	      ("M->" . company-select-last))
   ;;(:map lsp-mode-map
-	;;("<tab>" . company-indent-or-complete-common))
+	;;("TAB" . company-indent-or-complete-common))
   :custom
   (company-minimum-prefix-length 1)
   (company-idle-delay 0.5)
