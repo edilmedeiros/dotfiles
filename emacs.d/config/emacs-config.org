@@ -2566,7 +2566,8 @@ Navigate windows and frames using numbers !
   :bind
   (:map company-mode-map
 	      ;;("M-TAB" . company-complete-selection)
-        ("M-TAB" . company-indent-or-complete-common)
+        ("M-TAB" . company-indent-or-complete-common))
+  (:map company-active-map
 	      ("C-n" . company-select-next)
 	      ("C-p" . company-select-previous)
 	      ("M-<" . company-select-first)
