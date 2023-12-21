@@ -80,7 +80,7 @@ Fixing Emacs's defaults is a nontrivial problem. We'll start with UI concerns.
    ;; Fix undo in commands affecting the mark.
    mark-even-if-inactive nil
    ;; Let C-k delete the whole line.
-   kill-whole-line t
+   ;;kill-whole-line t
    ;; search should be case-sensitive by default
    case-fold-search nil
    ;; accept 'y' or 'n' instead of yes/no
@@ -1592,6 +1592,15 @@ If file starts with '#!' it might be a script, make it executable.
    IF you place cursor at the beginning of line, the default behaviour of C-k is to kill all text until newline, but not the newline itself. You need to type C-k again to remove that newline. This setting allows to avoid typing C-k twice by killing all text until the newline and newline itself (but only when cursor is placed at the beginning of a line).
 #+begin_src emacs-lisp
   (setq kill-whole-line t)
+#+end_src
+
+Kill whole line with C-w if no region is selected.
+
+#+begin_src emacs-lisp
+(use-package whole-line-or-region
+  :ensure t
+  :config
+  (whole-line-or-region-global-mode))
 #+end_src
 
 ** Identation
