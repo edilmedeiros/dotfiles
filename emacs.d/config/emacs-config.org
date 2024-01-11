@@ -582,7 +582,7 @@ Any modern editor should include multiple-cursor support. Sure, keyboard macros 
 The ~fill-paragraph~ (~M-q~) command can be useful for formatting long text lines in a pleasing matter. I don't do it in every document, but when I do, I want more columns than the default *:70*.
 
 #+begin_src emacs-lisp
-  (setq-default fill-column 135)
+  (setq-default fill-column 80)
 #+end_src
 
 Textmate-style tap-to-expand-into-the-current-delimiter is very useful and curiously absent.
