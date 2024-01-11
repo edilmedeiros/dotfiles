@@ -2802,18 +2802,29 @@ Requires https://github.com/emacs-grammarly/lsp-grammarly and https://emacs-lsp.
 * Ispell
 Spell checking.
 #+BEGIN_SRC emacs-lisp
+
+(add-to-list 'ispell-local-dictionary-alist '("english-hunspell"
+                                              "[[:alpha:]]"
+                                              "[^[:alpha:]]"
+                                              "[']"
+                                              t
+                                              ("-d" "en_US")
+                                              nil
+                                              iso-8859-1))
+
+; Tell ispell-mode to use hunspell.
+(setq
+  ispell-program-name "/opt/local/bin/hunspell"
+  ispell-dictionary "english-hunspell")
+
 (autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
 (setenv "DICTIONARY" "en_US")
 
 ; Set $DICPATH to "$HOME/Library/Spelling" for hunspell.
 (setenv
   "DICPATH"
-  (concat (getenv "HOME") "/Library/Spelling"))
-
-; Tell ispell-mode to use hunspell.
-(setq
-  ispell-program-name
-  "/opt/local/bin/hunspell")
+  "/opt/local/share/hunspell/")
+;  (concat (getenv "HOME") "/Library/Spelling"))
 #+END_SRC
 
 To switch between english and portuguese dictionaries.
