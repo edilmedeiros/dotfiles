@@ -14,7 +14,6 @@
 /emacs.d/projectile-bookmarks.eld
 /emacs.d/transient/
 /emacs.d/var/
-/oh-my-zsh/
 /emacs.d/.dap-breakpoints
 /emacs.d/.lsp-session-v1
 /emacs.d/.mc-lists.el
@@ -27,3 +26,6 @@
 /emacs.d/projects
 /emacs.d/share/
 /emacs.d/tramp
+/emacs.d/multisession/
+
+/oh-my-zsh/
