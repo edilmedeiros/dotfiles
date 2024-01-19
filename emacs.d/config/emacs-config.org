@@ -1235,12 +1235,19 @@ Experimenting with editing Obsidian files on emacs.
 ** Server Mode
   Start emacs server.
 #+BEGIN_SRC emacs-lisp
-  (server-start)
+;; (server-start)
 
-  ; Makes emacs behave nicely with OSX open command: 'open with emacs'
-  ; will send the file to the fullsscreen frame instead of create a new
-  ; frame.
-  (setq ns-pop-up-frames nil)
+;; start emacs-server if not running
+(add-hook 'after-init-hook
+          (lambda ()
+            (require 'server)
+            (unless (server-running-p)
+              (server-start))))
+
+; Makes emacs behave nicely with OSX open command: 'open with emacs'
+; will send the file to the fullsscreen frame instead of create a new
+; frame.
+(setq ns-pop-up-frames nil)
 #+END_SRC
 
 * General Configuration
