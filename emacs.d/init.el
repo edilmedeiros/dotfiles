@@ -25,8 +25,6 @@
 
 (eval-when-compile
   (require 'use-package)
-;;  (require 'org-install)
-  ;;  (require 'ob-tangle)
   )
 
 (defun reload-config ()

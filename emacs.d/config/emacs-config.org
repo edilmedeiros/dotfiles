@@ -2144,24 +2144,24 @@ See: https://alpha2phi.medium.com/emacs-lsp-and-dap-7c1786282324
     "The Haskell formatter to use. One of: 'ormolu, 'stylish, nil. Set it per-project in .dir-locals."
     :safe 'symbolp)
 
-  (defun haskell-smart-format ()
-    "Format a buffer based on the value of 'haskell-formatter'."
-    (interactive)
-    (cl-ecase haskell-formatter
-      ('ormolu (ormolu-format-buffer))
-      ('stylish (haskell-mode-stylish-buffer))
-      (nil nil)
-      ))
+  ;; (defun haskell-smart-format ()
+  ;;   "Format a buffer based on the value of 'haskell-formatter'."
+  ;;   (interactive)
+  ;;   (cl-ecase haskell-formatter
+  ;;     ('ormolu (ormolu-format-buffer))
+  ;;     ('stylish (haskell-mode-stylish-buffer))
+  ;;     (nil nil)
+  ;;     ))
 
 
-  (defun haskell-switch-formatters ()
-    "Switch from ormolu to stylish-haskell, or vice versa."
-    (interactive)
-    (setq haskell-formatter
-          (cl-ecase haskell-formatter
-            ('ormolu 'stylish)
-            ('stylish 'ormolu)
-            (nil nil))))
+  ;; (defun haskell-switch-formatters ()
+  ;;   "Switch from ormolu to stylish-haskell, or vice versa."
+  ;;   (interactive)
+  ;;   (setq haskell-formatter
+  ;;         (cl-ecase haskell-formatter
+  ;;           ('ormolu 'stylish)
+  ;;           ('stylish 'ormolu)
+  ;;           (nil nil))))
 
   (setq haskell-compile-cabal-build-command "stack build")
 
@@ -2773,7 +2773,7 @@ Add Make to compilation list. Useful for projects with Makefile.
 (eval-after-load "tex"
   '(add-to-list 'TeX-command-list
                 '("Make" "make" TeX-run-command nil nil)))
-(add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "Make")))
+(add-hook 'TeX-mode-hook #'(lambda () (setq TeX-command-default "Make")))
 #+END_SRC
 
 Use Skim as the default pdf viewer.
