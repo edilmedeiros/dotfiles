@@ -2,12 +2,6 @@
 
 # Emacs ########################################################################
 
-# Functions to open Emacs detached from the terminal and allow passing filenames:
-# e <filename> opens emacs on the GUI
-#e () { emacsclient $1 & }
-# ee <filename> opens emacs on the terminal
-#ee () { emacs -nw $1 }
-
 # Check if emacs GUI is open. If so, connect to it. If not, start the gui.
 e () { pgrep -xiq emacs && emacsclient -n $1 || emacs $1 &; }
 
@@ -15,8 +9,8 @@ e () { pgrep -xiq emacs && emacsclient -n $1 || emacs $1 &; }
 ee () { emacs -nw $1 }
 
 
-alias aliases='emacs ~/dotfiles/bash_aliases &'
-alias profile='emacs ~/dotfiles/profile &'
+alias aliases='ee ~/.dotfiles/zsh-custom/aliases.zsh &'
+alias profile='ee ~/.dotfiles/profile &'
 
 
 # Bash #########################################################################
