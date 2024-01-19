@@ -30,5 +30,4 @@
 /emacs.d/multisession/
 
 # Oh-my-zsh stuff, but track custom folder
-/oh-my-zsh/*
-!/oh-my-zsh/custom
+/oh-my-zsh/
