@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='ee'
+  export EDITOR='emacs -nw'
 fi
 
 # Compilation flags
