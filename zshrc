@@ -83,6 +83,12 @@ ZSH_CUSTOM=.dotfiles/zsh-custom
 plugins=(git macports zsh-autosuggestions zsh-syntax-highlighting alias-finder common-aliases 
 copypath extract macos sudo web-search virtualenv docker docker-compose)
 
+# Add wikipedia to web_search
+ZSH_WEB_SEARCH_ENGINES=(
+    wikipedia "https://en.wikipedia.org/w/index.php?title=Special:Search&search="
+    reddit "https://www.reddit.com/search/?q="
+)
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
