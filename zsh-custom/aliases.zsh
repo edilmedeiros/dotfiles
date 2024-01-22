@@ -32,3 +32,9 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
+
+
+# Bitcoin ######################################################################
+
+alias bcli='bitcoin-cli'
+alias bclih='bitcoin-cli help '
