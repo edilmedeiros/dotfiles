@@ -9,8 +9,8 @@ e () { pgrep -xiq emacs && emacsclient -n $1 || emacs $1 &; }
 ee () { emacs -nw $1 }
 
 
-alias aliases='ee ~/.dotfiles/zsh-custom/aliases.zsh &'
-alias profile='ee ~/.dotfiles/profile &'
+alias aliases='ee ~/.dotfiles/zsh-custom/aliases.zsh'
+alias profile='ee ~/.dotfiles/profile'
 
 
 # Bash #########################################################################
