@@ -2866,6 +2866,29 @@ Correct behavior in org mode.
 (add-hook 'org-mode-hook #'endless/org-ispell)
 #+END_SRC
 
+* IRC
+
+#+begin_src emacs-lisp
+;; Set our nickname & real-name as constant variables
+(setq
+ erc-nick "edilmedeiros"     ; Our IRC nick
+ erc-user-full-name "Edil Medeiros") ; Our /whois name
+
+;; Define a function to connect to a server
+(defun irc-libera ()
+  (interactive)
+  (erc-tls :server "irc.libera.chat"
+           :port   "6697"))
+
+;; Or assign it to a keybinding
+;; This example is also using erc's TLS capabilities:
+;; (global-set-key "\C-cen"
+;;   (lambda ()
+;;   (interactive)
+;;   (erc-tls :server "server2.example.com"
+;;            :port   "6697")))
+#+end_src
+
 * Runtime Performance
 Dial the GC threshold back down so that garbage collection happens more frequently but in less time.
 #+begin_src emacs-lisp
