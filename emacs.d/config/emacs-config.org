@@ -2069,6 +2069,16 @@ Git Gutter
   ;;   (set-face-foreground 'git-gutter:deleted "LightCoral"))
 #+end_src
 
+** GREP
+
+#+begin_src emacs-lisp
+(use-package ripgrep
+  :ensure t)
+
+(use-package rg
+  :ensure t)
+#+end_src
+
 ** Languages
 *** Language Servers
 Language Server Protocol.
