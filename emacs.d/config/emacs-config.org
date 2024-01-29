@@ -1592,6 +1592,108 @@ If file starts with '#!' it might be a script, make it executable.
 ** Buffer management
 #+begin_src emacs-lisp
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
+;; (setq ibuffer-saved-filter-groups
+;;       (quote (("default"
+;;                ("dired" (mode . dired-mode))
+;;                ("perl" (mode . cperl-mode))
+;;                ("erc" (mode . erc-mode))
+;;                ("planner" (or
+;;                            (name . "^\\*Calendar\\*$")
+;;                            (name . "^diary$")
+;;                            (mode . muse-mode)))
+;;                ("emacs" (or
+;;                          (name . "^\\*scratch\\*$")
+;;                          (name . "^\\*Messages\\*$")))
+;;                ("svg" (name . "\\.svg")) ; group by file extension
+;;                ("gnus" (or
+;;                         (mode . message-mode)
+;;                         (mode . bbdb-mode)
+;;                         (mode . mail-mode)
+;;                         (mode . gnus-group-mode)
+;;                         (mode . gnus-summary-mode)
+;;                         (mode . gnus-article-mode)
+;;                         (name . "^\\.bbdb$")
+;;                         (name . "^\\.newsrc-dribble")))))))
+
+;; (add-hook 'ibuffer-mode-hook
+;;           (lambda ()
+;;             (ibuffer-switch-to-saved-filter-groups "default")))
+#+end_src
+
+Group ibuffer results using version control.
+
+#+begin_src emacs-lisp
+(use-package ibuffer-vc
+  :ensure t
+  :config
+  (add-hook 'ibuffer-hook
+            (lambda ()
+              (ibuffer-vc-set-filter-groups-by-vc-root)
+              (unless (eq ibuffer-sorting-mode 'alphabetic)
+                (ibuffer-do-sort-by-alphabetic))))
+  )
+#+end_src
+
+Show human readable buffer sizes.
+
+#+begin_src emacs-lisp
+(defun ajv/human-readable-file-sizes-to-bytes (string)
+  "Convert a human-readable file size into bytes."
+  (interactive)
+  (cond
+   ((string-suffix-p "G" string t)
+    (* 1000000000 (string-to-number (substring string 0 (- (length string) 1)))))
+   ((string-suffix-p "M" string t)
+    (* 1000000 (string-to-number (substring string 0 (- (length string) 1)))))
+   ((string-suffix-p "K" string t)
+    (* 1000 (string-to-number (substring string 0 (- (length string) 1)))))
+   (t
+    (string-to-number (substring string 0 (- (length string) 1))))
+   )
+  )
+
+(defun ajv/bytes-to-human-readable-file-sizes (bytes)
+  "Convert number of bytes to human-readable file size."
+  (interactive)
+  (cond
+   ((> bytes 1000000000) (format "%10.1fG" (/ bytes 1000000000.0)))
+   ((> bytes 100000000) (format "%10.0fM" (/ bytes 1000000.0)))
+   ((> bytes 1000000) (format "%10.1fM" (/ bytes 1000000.0)))
+   ((> bytes 100000) (format "%10.0fk" (/ bytes 1000.0)))
+   ((> bytes 1000) (format "%10.1fk" (/ bytes 1000.0)))
+   (t (format "%10d" bytes)))
+  )
+
+;; Use human readable Size column instead of original one
+(define-ibuffer-column size-h
+  (:name "Size"
+	 :inline t
+	 :summarizer
+	 (lambda (column-strings)
+	   (let ((total 0))
+	     (dolist (string column-strings)
+	       (setq total
+		     ;; like, ewww ...
+		     (+ (float (ajv/human-readable-file-sizes-to-bytes string))
+			total)))
+	     (ajv/bytes-to-human-readable-file-sizes total)))	 ;; :summarizer nil
+	 )
+  (ajv/bytes-to-human-readable-file-sizes (buffer-size)))
+
+;; Modify the default ibuffer-formats
+(setq ibuffer-formats
+      '((mark modified read-only locked " "
+	      (name 20 20 :left :elide)
+	      " "
+	      (size-h 11 -1 :right)
+	      " "
+	      (mode 16 16 :left :elide)
+	      " "
+	      filename-and-process)
+	(mark " "
+	      (name 16 -1)
+	      " " filename)))
 #+end_src
 
 * Editing
