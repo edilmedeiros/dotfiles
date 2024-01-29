@@ -10,6 +10,7 @@ export LIBS="$LIBS -L/opt/local/lib"
 # Berkeley-db (optional)
 #export BDB_CFLAGS="/opt/local/lib/db48"
 #export CPPFLAGS="$CPPFLAGS -I/opt/local/include/db48"
+export LDFLAGS="$LDFLAGS -L/opt/local/lib/db48"
 
 # Miniupnpc (optional)
 #export MINIUPNPC_CPPFLAGS="-I/opt/local/include"
