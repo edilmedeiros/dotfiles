@@ -1,7 +1,7 @@
 # Add variables to build bitcoin using macports dependencies
 
 export CPPFLAGS="$CPPFLAGS -isystem /opt/local/include"
-export LIBS="-LIBS -L/opt/local/lib"
+export LIBS="$LIBS -L/opt/local/lib"
 
 # libevent (mandatory)
 export EVENT_CPPFLAGS="-I/opt/local/include"
