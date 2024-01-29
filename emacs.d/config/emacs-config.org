@@ -456,23 +456,30 @@ Window chrome both wastes space and looks unappealing. (This is actually pasted 
     (setq ns-auto-hide-menu-bar t))
 #+end_src
 
-I use the [[https://github.com/hlissner/emacs-doom-themes][Doom Emacs themes]], which are gorgeous. I sometimes also use Modus Vivendi, the excellent new theme that now ships with Emacs.
+I use the [[https://github.com/hlissner/emacs-doom-themes][Doom Emacs themes]], which are gorgeous. Themes to try: Dracula, Modus-vivendi, Tomorrow-night, monokai
 
 #+begin_src emacs-lisp
-  (use-package doom-themes
-    :config
-    (let ((chosen-theme 'doom-dracula))
-      (doom-themes-visual-bell-config)
-      (doom-themes-org-config)
-      (setq doom-themes-enable-bold t
-            doom-themes-enable-italic t
-            doom-challenger-deep-brighter-comments t
-            doom-challenger-deep-brighter-modeline t
-            doom-rouge-brighter-comments t
-            doom-ir-black-brighter-comments t
-            modus-themes-org-blocks 'gray-background
-            doom-dark+-blue-modeline nil)
-      (load-theme chosen-theme)))
+(use-package doom-themes
+  :config
+  ;;(let ((chosen-theme 'doom-dracula))
+  ;;(let ((chosen-theme 'doom-oceanic-next))
+  (let ((chosen-theme 'doom-palenight))
+  ;;(let ((chosen-theme 'doom-tomorrow-night))
+  ;;(let ((chosen-theme 'doom-monokai-pro))
+  ;;(let ((chosen-theme 'doom-molokai))
+  ;;(let ((chosen-theme 'doom-one))
+  ;;(let ((chosen-theme 'doom-material))
+    (doom-themes-visual-bell-config)
+    (doom-themes-org-config)
+    (setq doom-themes-enable-bold t
+          doom-themes-enable-italic t
+          doom-challenger-deep-brighter-comments t
+          doom-challenger-deep-brighter-modeline t
+          doom-rouge-brighter-comments t
+          doom-ir-black-brighter-comments t
+          modus-themes-org-blocks 'gray-background
+          doom-dark+-blue-modeline nil)
+    (load-theme chosen-theme)))
 #+end_src
 
 Most major modes pollute the modeline, so we pull in diminish.el to quiesce them.
