@@ -1955,17 +1955,22 @@ Ivy-rich enhances ivy
 ** Git
 Magit is a git client inside emacs.
 #+BEGIN_SRC emacs-lisp
-  (use-package magit
-    :diminish magit-auto-revert-mode
-    :diminish auto-revert-mode
-    :commands (magit-status magit-get-current-branch)
-    :bind (("C-c g s" . magit-status)
-           ("C-c g g" . magit-dispatch-popup))
-    :custom
-    (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1)
-    )
+(use-package magit
+  :diminish magit-auto-revert-mode
+  :diminish auto-revert-mode
+  :commands (magit-status magit-get-current-branch)
+  :bind (("C-c g s" . magit-status)
+         ("C-c g g" . magit-dispatch-popup))
+  :custom
+  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1)
+  )
 
-  (global-set-key [f6] 'magit-status)
+(global-set-key [f6] 'magit-status)
+
+(eval-after-load 'smerge-mode
+  (lambda ()
+    (define-key smerge-mode-map (kbd "C-c v") smerge-basic-map)
+    (define-key smerge-mode-map (kbd "C-c C-v") smerge-basic-map)))
 #+END_SRC
 
 Forge: Manage information on Github service (issues, pull requests, etc).
