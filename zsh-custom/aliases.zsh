@@ -7,6 +7,7 @@ e () { pgrep -xiq emacs && emacsclient -n $1 || emacs $1 &; }
 
 # Sometimes I want to edit "in place".
 ee () { emacs -nw $1 }
+ec () { emacsclient $1 & }
 
 
 alias aliases='ee ~/.dotfiles/zsh-custom/aliases.zsh'
