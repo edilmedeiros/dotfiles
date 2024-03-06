@@ -80,8 +80,7 @@ ZSH_CUSTOM=/Users/jose.edil/.dotfiles/zsh-custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macports zsh-autosuggestions zsh-syntax-highlighting alias-finder common-aliases 
-copypath extract macos sudo web-search virtualenv docker docker-compose)
+plugins=(git macports zsh-autosuggestions zsh-syntax-highlighting alias-finder common-aliases copypath extract macos sudo web-search virtualenv docker docker-compose rust)
 
 # Add wikipedia to web_search
 ZSH_WEB_SEARCH_ENGINES=(
