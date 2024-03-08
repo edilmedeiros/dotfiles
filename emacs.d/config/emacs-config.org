@@ -2135,8 +2135,8 @@ Experimeting with eglot instead of lsp-mode
   :config
   (setq elisp-flymake-byte-compile-load-path load-path)
   :hook ((emacs-lisp-mode . flymake-mode))
-  :bind (("C-c f ," . flymake-goto-next-error)
-         ("C-c f ." . flymake-goto-prev-error)
+  :bind (("C-c f ." . flymake-goto-next-error)
+         ("C-c f ," . flymake-goto-prev-error)
          ("C-c f b" . flymake-show-buffer-diagnostics)
          ("C-c f p" . flymake-show-project-diagnostics))
   )
