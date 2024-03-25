@@ -1720,6 +1720,16 @@ Kill whole line with C-w if no region is selected.
   (whole-line-or-region-global-mode))
 #+end_src
 
+** Transpose lines (move line and region up and down)
+
+#+begin_src emacs-lisp
+(use-package drag-stuff
+  :ensure t
+  :config
+  (drag-stuff-global-mode 1)
+  (drag-stuff-define-keys))
+#+end_src
+
 ** Identation
 Default to an indentation size of 2 spaces since it’s the norm for pretty much every language I use.
 #+begin_src emacs-lisp
