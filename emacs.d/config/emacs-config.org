@@ -1966,6 +1966,7 @@ Ivy-rich enhances ivy
 Magit is a git client inside emacs.
 #+BEGIN_SRC emacs-lisp
 (use-package magit
+  :ensure t
   :diminish magit-auto-revert-mode
   :diminish auto-revert-mode
   :commands (magit-status magit-get-current-branch)
@@ -1985,14 +1986,14 @@ Magit is a git client inside emacs.
 
 Forge: Manage information on Github service (issues, pull requests, etc).
 #+begin_src emacs-lisp
-  (use-package forge
-    :after magit)
+;;  (use-package forge
+;;    :after magit)
 #+end_src
 
 magit-todos: This is an interesting extension to Magit that shows a TODOs section in your git status buffer containing all lines with TODO (or other similar words) in files contained within the repo. More information at the GitHub repo.
 #+begin_src emacs-lisp
-  (use-package magit-todos
-    :after magit)
+;;  (use-package magit-todos
+;;    :after magit)
 #+end_src
 
 I'm trying out this git-status-in-the-fringe package, which looks fairly visually appealing.
