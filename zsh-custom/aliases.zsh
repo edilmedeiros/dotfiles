@@ -39,3 +39,9 @@ alias -- -="cd -"
 
 alias bcli='bitcoin-cli'
 alias bclih='bitcoin-cli help '
+
+# Bat ##########################################################################
+
+# Use bat to colorize man pages
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export BAT_THEME=Dracula
