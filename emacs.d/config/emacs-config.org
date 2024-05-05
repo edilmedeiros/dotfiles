@@ -2460,12 +2460,13 @@ Based on https://robert.kra.hn/posts/2021-02-07_rust-with-emacs/.
               ("C-c C-c Q" . lsp-workspace-shutdown)
               ("C-c C-c s" . lsp-rust-analyzer-status))
   :config
+  (setq rustic-lsp-client 'eglot)
   ;; uncomment for less flashiness
   ;; (setq lsp-eldoc-hook nil)
   ;; (setq lsp-enable-symbol-highlighting nil)
   ;; (setq lsp-signature-auto-activate nil)
-  (setq rustic-lsp-format t)
-  (setq rustic-format-trigger nil)
+  ;; (setq rustic-lsp-format t)
+  ;; (setq rustic-format-trigger nil)
   ;; comment to disable rustfmt on save
   ;;(setq rustic-format-on-save t)
   (add-hook 'rustic-mode-hook 'rk/rustic-mode-hook)
