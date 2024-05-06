@@ -29,3 +29,6 @@ export PATH=/Applications/ArmGNUToolchain/12.3.rel1/arm-none-eabi/bin:$PATH
 
 # JDK
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-21-oracle-java-se.jdk/Contents/Home
+
+# STM32Cube
+export STM32CubeMX_PATH=/Applications/STMicroelectronics/STM32CubeMX.app/Contents/Resources
