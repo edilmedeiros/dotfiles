@@ -80,13 +80,7 @@ ZSH_CUSTOM=/Users/jose.edil/.dotfiles/zsh-custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macports zsh-autosuggestions zsh-syntax-highlighting alias-finder common-aliases copypath extract macos sudo web-search virtualenv docker docker-compose rust)
-
-# Add wikipedia to web_search
-ZSH_WEB_SEARCH_ENGINES=(
-    wikipedia "https://en.wikipedia.org/w/index.php?title=Special:Search&search="
-    reddit "https://www.reddit.com/search/?q="
-)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting copypath extract virtualenv rust)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -127,41 +121,3 @@ source ~/.iterm2_shell_integration.zsh
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # eval "$(rbenv init - zsh)"
-
-export STM32CubeMX_PATH=/Applications/STMicroelectronics/STM32CubeMX.app/Contents/Resources
-
-# Setup fzf keybindings and fuzzy completion
-eval "$(fzf --zsh)"
-
-# Use fd instead of fzf
-#unalias fd
-export FZF_DEFAULT_COMMAND="fd --hidden --follow --strip-cwd-prefix --exclude .git"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type=d --hidden --follow --strip-cwd-prefix --exclude .git"
-
-# look for fzf-git
-
-# Use bat and eza to preview stuff
-show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
-export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
-export FZF_ALT_C_OPTS="--preview 'eza --tree --color-always {} | head -200'"
-
-_fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" "$1"
-}
-
-_fzf_compgen_dir() {
-  fd --type=d --hidden --follow --exclude ".git" . "$1"
-}
-
-_fzf_comprun() {
-  local command=$1
-  shift
-  
-  case "$command" in
-    cd)           fzf --preview 'eza --tree --color=always {} |head -200' "$@" ;;
-    export|unset) fzf --preview "eval 'echo \$' {}" "$@" ;;
-    ssh)          fzf --preview 'dig {}' "$@" ;;
-    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
-  esac
-}
