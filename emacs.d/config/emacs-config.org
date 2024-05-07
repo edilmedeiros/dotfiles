@@ -463,22 +463,17 @@ I use the [[https://github.com/hlissner/emacs-doom-themes][Doom Emacs themes]], 
   :config
   ;;(let ((chosen-theme 'doom-dracula))
   ;;(let ((chosen-theme 'doom-oceanic-next))
-  (let ((chosen-theme 'doom-palenight))
+  ;;(let ((chosen-theme 'doom-palenight))
   ;;(let ((chosen-theme 'doom-tomorrow-night))
   ;;(let ((chosen-theme 'doom-monokai-pro))
+  (let ((chosen-theme 'doom-monokai-pro))
   ;;(let ((chosen-theme 'doom-molokai))
   ;;(let ((chosen-theme 'doom-one))
   ;;(let ((chosen-theme 'doom-material))
     (doom-themes-visual-bell-config)
     (doom-themes-org-config)
     (setq doom-themes-enable-bold t
-          doom-themes-enable-italic t
-          doom-challenger-deep-brighter-comments t
-          doom-challenger-deep-brighter-modeline t
-          doom-rouge-brighter-comments t
-          doom-ir-black-brighter-comments t
-          modus-themes-org-blocks 'gray-background
-          doom-dark+-blue-modeline nil)
+          doom-themes-enable-italic t)
     (load-theme chosen-theme)))
 #+end_src
 
