@@ -1917,7 +1917,7 @@ Ivy-rich enhances ivy
    The keybindings for this are C+M+- and C+M+=.
 #+begin_src emacs-lisp
   (use-package default-text-scale
-    :defer 1
+    :defer t
     :config
     (default-text-scale-mode))
 #+end_src
@@ -1939,7 +1939,7 @@ Ivy-rich enhances ivy
 ** Window History with winner-mode
 #+begin_src emacs-lisp
   (use-package winner
-    :defer 1
+    :defer t
     :config
     (winner-mode))
 #+end_src
