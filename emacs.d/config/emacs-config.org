@@ -1118,7 +1118,7 @@ One of the main problems with Emacs is how many ephemeral buffers it creates. I'
                                 "\\*rustic-compilation\\*"
                                 help-mode
                                 prodigy-mode
-                                "magit:.\*"
+                                ;;"magit:.\*"
                                 "\\*deadgrep.\*"
                                 "\\*eldoc.\*"
                                 "\\*Codespaces\\*"
@@ -1965,11 +1965,20 @@ Magit is a git client inside emacs.
   :diminish magit-auto-revert-mode
   :diminish auto-revert-mode
   :commands (magit-status magit-get-current-branch)
+  :preface (defun my/magit-kill-buffers ()
+             "Restore window configuration and kill all Magit buffers."
+             (interactive)
+             (let ((buffers (magit-mode-get-buffers)))
+               (magit-restore-window-configuration)
+               (mapc #'kill-buffer buffers)))
+  :bind (:map magit-status-mode-map
+              ("q" . #'my/magit-kill-buffers)
+              ("C-x k" . #'my/magit-kill-buffers))
   :bind (("C-c g s" . magit-status)
          ("C-c g g" . magit-dispatch-popup))
   :custom
-  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1)
-  )
+  ((magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1)
+   (magit-bury-buffer-function #'magit-restore-window-configuration)))
 
 (global-set-key [f6] 'magit-status)
 
