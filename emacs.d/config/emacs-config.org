@@ -1725,7 +1725,7 @@ Kill whole line with C-w if no region is selected.
   (drag-stuff-define-keys))
 #+end_src
 
-** Identation
+** Indentation
 Default to an indentation size of 2 spaces since it’s the norm for pretty much every language I use.
 #+begin_src emacs-lisp
   (setq-default tab-width 2)
