@@ -459,22 +459,60 @@ Window chrome both wastes space and looks unappealing. (This is actually pasted 
 I use the [[https://github.com/hlissner/emacs-doom-themes][Doom Emacs themes]], which are gorgeous. Themes to try: Dracula, Modus-vivendi, Tomorrow-night, monokai
 
 #+begin_src emacs-lisp
-(use-package doom-themes
-  :config
-  ;;(let ((chosen-theme 'doom-dracula))
-  ;;(let ((chosen-theme 'doom-oceanic-next))
-  ;;(let ((chosen-theme 'doom-palenight))
-  ;;(let ((chosen-theme 'doom-tomorrow-night))
-  ;;(let ((chosen-theme 'doom-monokai-pro))
-  (let ((chosen-theme 'doom-monokai-pro))
-  ;;(let ((chosen-theme 'doom-molokai))
-  ;;(let ((chosen-theme 'doom-one))
-  ;;(let ((chosen-theme 'doom-material))
-    (doom-themes-visual-bell-config)
-    (doom-themes-org-config)
-    (setq doom-themes-enable-bold t
-          doom-themes-enable-italic t)
-    (load-theme chosen-theme)))
+  (use-package doom-themes
+    :config
+    (let ((chosen-theme 'doom-dracula))
+      (doom-themes-visual-bell-config)
+      (doom-themes-org-config)
+      (setq doom-themes-enable-bold t
+            doom-themes-enable-italic t)
+      (load-theme chosen-theme))
+    :custom-face
+    (ediff-current-diff-A ((t (:foreground "#ff5370" :background "#634661"))))
+    (ediff-fine-diff-A ((t (:foreground "#ff869a" :background "#634661" :weigth bold))))
+    (ediff-even-diff-A ((t (:background ,(doom-darken "#634661" 0.3)))))
+    (ediff-odd-diff-A ((t (:background ,(doom-darken "#634661" 0.3)))))
+    
+    (ediff-current-diff-B ((t (:foreground "#9cb970" :background "#47524d"))))
+    (ediff-fine-diff-B ((t (:foreground "#b9ce9a" :background "#47524d" :weigth bold))))
+    (ediff-even-diff-B ((t (:background ,(doom-darken "#47524d" 0.3)))))
+    (ediff-odd-diff-B ((t (:background ,(doom-darken "#47524d" 0.3)))))
+    
+    (ediff-current-diff-C ((t (:foreground "#c57056" :background "#524047"))))
+    (ediff-fine-diff-C ((t (:foreground "#d69a88" :background "#524047" :weigth bold))))
+    (ediff-even-diff-C ((t (:background ,(doom-darken "#524047" 0.3)))))
+    (ediff-odd-diff-C ((t (:background ,(doom-darken "#524047" 0.3)))))
+
+    ;; (region ((t (:inherit 'region :background ,(doom-lighten 'region 0.1)))))
+    (highlight ((t (:inherit 'highlight :background ,(doom-lighten 'highlight 0.2)))))
+    (hl-line ((t (:inherit 'bg-alt :background ,(doom-darken 'bg-alt 0.2)))))
+    (treemacs-hl-line-face ((t (:inherit 'bg-alt :background ,(doom-darken 'bg-alt 0.2)))))
+    )
+
+;; Must be used *after* the theme is loaded
+;; (custom-set-faces
+;;   `(mode-line ((t (:background ,(doom-color 'dark-violet)))))
+;;   `(font-lock-comment-face ((t (:foreground ,(doom-color 'base6))))))
+
+;;For packaged versions which must use `require'.
+;; (use-package modus-themes
+;;   :ensure t
+;;   :config
+;;   ;; Add all your customizations prior to loading the themes
+;;   (setq modus-themes-italic-constructs t
+;;         modus-themes-bold-constructs t)
+;;   (setq modus-themes-prompts '(bold))
+;;   (setq modus-themes-completions nil)
+  
+;;   ;; Maybe define some palette overrides, such as by using our presets
+;;   ;; (setq modus-themes-common-palette-overrides
+;;   ;; modus-themes-preset-overrides-intense)
+  
+;;   ;; Load the theme of your choice.
+;;   (load-theme 'modus-vivendi-tinted)
+  
+;;   ;;(define-key global-map (kbd "<f5>") #'modus-themes-toggle)
+;;   )
 #+end_src
 
 Most major modes pollute the modeline, so we pull in diminish.el to quiesce them.
