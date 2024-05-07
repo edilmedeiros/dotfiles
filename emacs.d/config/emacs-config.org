@@ -2018,6 +2018,27 @@ I'm trying out this git-status-in-the-fringe package, which looks fairly visuall
        (change . " ")
        (unknown . "?")
        (ignored . "i"))))
+
+Setup ediff to make code review more pleasant.
+#+begin_src emacs-lisp
+;; Split windows horizontally: make comparing files easier.
+;; (setq ediff-split-window-function 'split-window-horizontally)
+(setq ediff-split-window-function
+      (if
+          (> (frame-width) 150)
+          'split-window-horizontally
+        'split-window-vertically))
+
+;; No additional frame nonsense, everything in one window.
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
+;; Ask to close buffers after when closing ediff
+(setq ediff-keep-variants nil)
+
+(setq ediff-make-buffers-readonly-at-startup nil)
+(setq ediff-merge-revisions-with-ancestor t)
+(setq ediff-show-clashes-only t)
+;(setq ediff-diff-options "-w")
 #+end_src
 
 git-link
