@@ -10,7 +10,6 @@ eee () { emacs -nw $1 }
 ee () { emacsclient -nw $1 }
 ec () { emacsclient $1 & }
 
-35;21;21M
 alias aliases='ee ~/.dotfiles/zsh-custom/aliases.zsh'
 alias profile='ee ~/.dotfiles/profile'
 
