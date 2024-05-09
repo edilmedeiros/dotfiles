@@ -228,9 +228,9 @@ Add some OSX behavior on cursor movement.
 
 Talking about movement.
 #+begin_src emacs-lisp
-  (setq
-  ;; insert newlines if the point is at the end of the buffer
-   next-line-add-newlines t)
+;;(setq
+;; insert newlines if the point is at the end of the buffer
+;; next-line-add-newlines t)
 #+end_src
 which-key is great for getting an overview of what keybindings are available based on the prefix keys you entered.
 #+BEGIN_SRC emacs-lisp
