@@ -2031,8 +2031,6 @@ Magit is a git client inside emacs.
   ((magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1)
    (magit-bury-buffer-function #'magit-restore-window-configuration)))
 
-(global-set-key [f6] 'magit-status)
-
 (eval-after-load 'smerge-mode
   (lambda ()
     (define-key smerge-mode-map (kbd "C-c v") smerge-basic-map)
