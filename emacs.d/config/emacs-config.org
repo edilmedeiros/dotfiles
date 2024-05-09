@@ -226,21 +226,6 @@ Add some OSX behavior on cursor movement.
 (global-set-key (kbd "s-<down>") 'scroll-up-command)
 #+END_SRC
 
-Talking about movement.
-#+begin_src emacs-lisp
-;;(setq
-;; insert newlines if the point is at the end of the buffer
-;; next-line-add-newlines t)
-#+end_src
-which-key is great for getting an overview of what keybindings are available based on the prefix keys you entered.
-#+BEGIN_SRC emacs-lisp
-;; (use-package which-key
-;;   :init (which-key-mode)
-;;   :diminish which-key-mode
-;;   :config
-;;   (setq which-key-idle-delay 0.3))
-#+END_SRC
-
 Buffer Management
 #+begin_src emacs-lisp
   (global-set-key (kbd "C-x b") 'counsel-switch-buffer)
@@ -382,13 +367,6 @@ I almost never want to quit if readme.org is in a bad state. This warns me shoul
      (y-or-n-p "Configuration file may be malformed: really exit?")))
 
   (push #'check-config kill-emacs-query-functions)
-#+end_src
-
-My RSI hurts a lot.
-
-#+begin_src emacs-lisp
-;; (setq type-break-file-name nil)
-;; (type-break-mode)
 #+end_src
 
 ** Visuals
@@ -569,14 +547,6 @@ Highlighting the closing/opening pair associated with a given parenthesis is ess
   (use-package rainbow-delimiters
     :disabled
     :hook ((prog-mode . rainbow-delimiters-mode)))
-#+end_src
-
-It's nice to have the option to center a window, given the considerable size of my screen.
-
-#+begin_src emacs-lisp
-;; (use-package centered-window
-;;   :custom
-;;   (cwm-centered-window-width 180))
 #+end_src
 
 Compilation buffers should wrap their lines.
