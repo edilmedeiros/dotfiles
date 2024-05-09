@@ -3,15 +3,17 @@
 # Emacs ########################################################################
 
 # Check if emacs GUI is open. If so, connect to it. If not, start the gui.
-e () { pgrep -xiq emacs && emacsclient -n $1 || emacs $1 &; }
+e () { pgrep -xiq emacs && emacsclient -nw $1 || emacs -nw $1 &; }
+egui () { pgrep -xiq emacs && emacsclient -n $1 || emacs $1 &; }
+
 
 # Sometimes I want to edit "in place".
 eee () { emacs -nw $1 }
 ee () { emacsclient -nw $1 }
 ec () { emacsclient $1 & }
 
-alias aliases='ee ~/.dotfiles/zsh-custom/aliases.zsh'
-alias profile='ee ~/.dotfiles/profile'
+alias aliases='ec ~/.dotfiles/zsh-custom/aliases.zsh'
+alias profile='ec ~/.dotfiles/profile'
 
 
 # Bash #########################################################################
