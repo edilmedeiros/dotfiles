@@ -454,6 +454,17 @@ Window chrome both wastes space and looks unappealing. (This is actually pasted 
 
   (when (eq system-type 'darwin)
     (setq ns-auto-hide-menu-bar t))
+;; Options for when in the terminal
+(unless (display-graphic-p)
+  (menu-bar-mode -1)
+  (global-visual-line-mode 1)
+  (xterm-mouse-mode 1)
+  ;; Seems unnecessary to enable scrolling...
+  ;; (global-set-key (kbd "<mouse-4>") 'pel-scroll-down)
+  ;; (global-set-key (kbd "<mouse-5>") 'pel-scroll-up)
+  ;; Swap DEL and backaspace on terminal mode
+  (keyboard-translate ?\C-h ?\C-?)
+)
 #+end_src
 
 I use the [[https://github.com/hlissner/emacs-doom-themes][Doom Emacs themes]], which are gorgeous. Themes to try: Dracula, Modus-vivendi, Tomorrow-night, monokai
